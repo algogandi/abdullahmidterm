@@ -50,4 +50,14 @@ class CarsTest extends TestCase
 
     }
 
+    public function testCount()
+    {
+        $car = Car::All();
+        $car->count='50';
+        $this->assertEquals(50, $car->count());
+
+
+
+    }
+
 }
