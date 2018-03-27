@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use PHPUnit\Framework\Constraint\IsType;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -54,8 +55,25 @@ class UsersTest extends TestCase
 
     }
 
+    public function testCount()
+    {
+        $user = User::All();
+        $user->count='50';
+        //$user->count();
+        $this->assertEquals(50, $user->count());
+        //$this->assertCount($user);
+        //$this->assertInternalType(IsType::TYPE_INT, $user);
+        //$this->assertTrue($user);
+
+
+    }
 
 }
+
+//$user = User::All();
+//$userCount = $user->count();
+//$this->assertInternalType(IsType::TYPE_INT, $userCount);
+
 
 
 //$user = User::inRandomOrder()->first();
