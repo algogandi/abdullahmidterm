@@ -40,6 +40,20 @@ class UsersTest extends TestCase
 
     }
 
+    public function testDelete()
+    {
+
+        $user = User::inRandomOrder()->first();
+        $user->name = '';
+        $user->email = '';
+        $user->password = '';
+        $user->save();
+
+        //$this->assertTrue(true);
+        $this->assertTrue($user->delete());
+
+    }
+
 
 }
 
