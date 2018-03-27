@@ -38,6 +38,16 @@ class CarsTest extends TestCase
 
     }
 
+    public function testDelete()
+    {
 
+        $car = Car::inRandomOrder()->first();
+        $car->make = '';
+        $car->model = '';
+        $car->year = '';
+        $car->save();
+        $this->assertTrue($car->delete());
+
+    }
 
 }
