@@ -60,4 +60,42 @@ class CarsTest extends TestCase
 
     }
 
+    public function testInteger()
+    {
+        $car = Car::all();
+        $year = (int) $car->count();
+        //$count = $car->count();
+        //$year = $car;
+        //$year = (int)$year->year();
+        $this->assertInternalType(IsType::TYPE_INT,$year);
+        //$this->assertFalse(is_integer($year));
+
+    }
+
+    //public function testEither()
+    //{
+        //$car = Car::all();
+        //$model = $car;
+        //$car->assertDatabaseHas($model='ford', 'honda', 'toyota');
+        //$car = Car::all();
+        //$model = $car();
+        //$count = $car->count();
+
+        //$car = new (['ford', 'honda', 'toyota']);
+        //$car->year ='';
+        //$this->assertEquals($car->count);
+        //$this->assertCount(3, $car->get());
+        //$this->assertDatabaseHas($model->['']);
+
+    //}
+
+
+    //public function testString()
+    //{
+        //$car = Car::all();
+        //$model = (string) $car->count();
+        //$this->assertInternalType(IsType::TYPE_STRING,$model);
+        //$this->assertFalse(is_integer($year));
+
+    //}
 }
