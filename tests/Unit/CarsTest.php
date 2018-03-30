@@ -62,8 +62,8 @@ class CarsTest extends TestCase
 
     public function testInteger()
     {
-        $car = Car::all();
-        $year = (int) $car->count();
+        $car = Car::inRandomOrder()->first();
+        $year= (int)$car->year;
         //$count = $car->count();
         //$year = $car;
         //$year = (int)$year->year();
