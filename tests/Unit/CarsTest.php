@@ -72,9 +72,12 @@ class CarsTest extends TestCase
 
     }
 
-    //public function testEither()
-    //{
-        //$car = Car::all();
+    public function testEither()
+    {
+        $car = Car::inRandomOrder()->first();
+
+        $value=$car->make;
+
         //$model = $car;
         //$car->assertDatabaseHas($model='ford', 'honda', 'toyota');
         //$car = Car::all();
@@ -86,8 +89,9 @@ class CarsTest extends TestCase
         //$this->assertEquals($car->count);
         //$this->assertCount(3, $car->get());
         //$this->assertDatabaseHas($model->['']);
+        $this->assertContains($value, ['honda','toyota','ford']);
 
-    //}
+    }
 
 
     //public function testString()
