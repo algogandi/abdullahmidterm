@@ -94,12 +94,13 @@ class CarsTest extends TestCase
     }
 
 
-    //public function testString()
-    //{
-        //$car = Car::all();
+    public function testString()
+    {
+        $car = Car::inRandomOrder()->first();
         //$model = (string) $car->count();
-        //$this->assertInternalType(IsType::TYPE_STRING,$model);
+        $this->assertInternalType('string',$car->model);
         //$this->assertFalse(is_integer($year));
+        //$this->assertInstanceOf('App\Car',$car);
 
-    //}
+    }
 }
