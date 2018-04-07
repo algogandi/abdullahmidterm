@@ -17,9 +17,15 @@ class UsersTest extends TestCase
      */
 
 
-    public function testExample()
+    public function testSave()
     {
-        $this->assertTrue(true);
+        $user = factory(\App\User::class)->make();
+        $this->assertTrue($user->save());
+    }
+    public function testQuestions()
+    {
+        $user = factory(\App\User::class)->make();
+        $this->assertTrue(is_object($user->questions()->get()));
     }
 
 
