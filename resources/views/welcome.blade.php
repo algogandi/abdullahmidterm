@@ -65,8 +65,6 @@
         </style>
     </head>
     <body>
-    <li><a href="{{route('about')}}">About</a></li>
-    <li><a href="{{route('contact')}}">contact</a></li>
 
     <div class="flex-center position-ref full-height">
 
@@ -77,8 +75,6 @@
             <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
-                    <li><a href="{{route('about')}}">About</a></li>
-                    <li><a href="{{route('contact')}}">contact</a></li>
 
                     @else
 
