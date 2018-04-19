@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/user/{user_id}/profile/{profile_id}', 'ProfileController@show')->name('profile.show');
+
+Route::resources([
+    'question' => 'QuestionController',
+]);
+
 //Route::get('/about', 'PagesController@about')->name('about');
 //Route::get('/contact', 'PagesController@contact')->name('contact');
 //Route::post('/contact', 'PagesController@store')->name('contact.store');  //should be post
