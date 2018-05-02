@@ -51,5 +51,20 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
 @endsection
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Authorization Access</div>
+            <div class="panel-body">
+                You are logged in! as <strong>{{ strtoupper(Auth::user()->type) }}</strong> <p></p>
+
+                Admin Page: <a href="{{ url('/') }}/adminOnlyPage">{{ url('/') }}/adminOnlyPage</a> <p></p>
+
+                Super Admin Page: <a href="{{ url('/') }}/superAdminOnlyPage">{{ url('/') }}/super_adminOnlyPage</a> <p></p>
+
+                Member Page: <a href="{{ url('/') }}/memberOnlyPage">{{ url('/') }}/memberOnlyPage</a> <p></p>
+            </div>
+        </div>

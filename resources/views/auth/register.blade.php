@@ -51,7 +51,7 @@
 
 
                         <div class="form-group">
-                            <label for="type" class="col-md-4 control-label" >User Type:</label>
+                            <label for="type" class="col-md-4 control-label">User Type:</label>
                             <div class="col-md-6">
                                 <select class="form-control" name="type" id="type">
                                     <option value="admin">Admin</option>
