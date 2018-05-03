@@ -1,9 +1,7 @@
 <?php
-
 namespace App\Http\Middleware;
-
 use Closure;
-
+use Illuminate\Http\Response;
 class AdminMiddleware
 {
     /**
@@ -17,9 +15,8 @@ class AdminMiddleware
     {
         if ($request->user() && $request->user()->type != 'admin')
         {
-            return new Response(view('unauthorized')->with('role','admin'));
+            return new Response(view('unauthorized')->with('role', 'ADMIN'));
         }
         return $next($request);
     }
-
 }

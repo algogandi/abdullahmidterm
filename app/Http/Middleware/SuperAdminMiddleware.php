@@ -1,9 +1,7 @@
 <?php
-
 namespace App\Http\Middleware;
-
 use Closure;
-
+use Illuminate\Http\Response;
 class SuperAdminMiddleware
 {
     /**
@@ -17,10 +15,8 @@ class SuperAdminMiddleware
     {
         if ($request->user() && $request->user()->type != 'super_admin')
         {
-            return new Response(view('unauthorized')->with('role','super_admin'));
-
+            return new Response(view('unauthorized')->with('role', 'SUPER ADMIN'));
         }
         return $next($request);
     }
-
 }
