@@ -56,15 +56,28 @@
         </div>
 @endsection
 
-        <div class="panel panel-default">
-            <div class="panel-heading">Authorization Access</div>
-            <div class="panel-body">
-                You are logged in! as <strong>{{ strtoupper(Auth::user()->type) }}</strong> <p></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Authorization Access LOOKS</div>
 
-                Admin Page: <a href="{{ url('/') }}/adminOnlyPage">{{ url('/') }}/adminOnlyPage</a> <p></p>
+                        <div class="panel-body">
+                            @if (session('status'))
+                                <div class="alert alert-success">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
 
-                Super Admin Page: <a href="{{ url('/') }}/superAdminOnlyPage">{{ url('/') }}/super_adminOnlyPage</a> <p></p>
+                            You are logged in! as <strong>{{ strtoupper(Auth::user()->type) }}</strong>
+                            <br>
 
-                Member Page: <a href="{{ url('/') }}/memberOnlyPage">{{ url('/') }}/memberOnlyPage</a> <p></p>
+                            THIS IS ONLY FOR THE Admin Page: <a href="{{ url('/') }}/adminOnlyPage">{{ url('/') }}/adminOnlyPage</a>
+                            <br>THIS IS ONLY FOR THE Super Admin Page: <a href="{{ url('/') }}/superAdminOnlyPage">{{ url('/') }}/super_adminOnlyPage</a>
+                            <br>THIS IS ONLY FOR THE Member Page: <a href="{{ url('/') }}/memberOnlyPage">{{ url('/') }}/memberOnlyPage</a>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
