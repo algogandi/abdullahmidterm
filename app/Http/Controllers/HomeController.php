@@ -35,11 +35,9 @@ class HomeController extends Controller
     public function admin(Request $req){
         return view('middleware')->withMessage("Admin");
     }
-
     public function super_admin(Request $req){
         return view('middleware')->withMessage("Super Admin");
     }
-
     public function member(Request $req){
         return view('middleware')->withMessage("Member");
     }
