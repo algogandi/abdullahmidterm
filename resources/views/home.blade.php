@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Authorization Access LOOKS</div>
+                        <div class="panel-heading"> <h1> Authorization Access </h1> </div> <P></P>
 
                         <div class="panel-body">
                             @if (session('status'))
@@ -69,12 +69,12 @@
                                 </div>
                             @endif
 
-                            You are logged in! as <strong>{{ strtoupper(Auth::user()->type) }}</strong>
+                            Your Authorization Access is <strong>{{ strtoupper(Auth::user()->type) }}</strong>
                             <br>
 
-                            THIS IS ONLY FOR THE Admin Page: <a href="{{ url('/') }}/adminOnlyPage">{{ url('/') }}/adminOnlyPage</a>
-                            <br>THIS IS ONLY FOR THE Super Admin Page: <a href="{{ url('/') }}/superAdminOnlyPage">{{ url('/') }}/super_adminOnlyPage</a>
-                            <br>THIS IS ONLY FOR THE Member Page: <a href="{{ url('/') }}/memberOnlyPage">{{ url('/') }}/memberOnlyPage</a>
+                            THIS IS ONLY FOR THE Admin PAGE: <a href="{{ url('/') }}/adminOnlyPage">{{ url('/') }}/adminOnlyPage</a>
+                            <br>THIS IS ONLY FOR THE Super Admin PAGE: <a href="{{ url('/') }}/superAdminOnlyPage">{{ url('/') }}/super_adminOnlyPage</a>
+                            <br>THIS IS ONLY FOR THE Member PAGE: <a href="{{ url('/') }}/memberOnlyPage">{{ url('/') }}/memberOnlyPage</a>
 
                         </div>
                     </div>
