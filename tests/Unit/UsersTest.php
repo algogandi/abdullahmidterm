@@ -40,6 +40,15 @@ class UsersTest extends TestCase
     }
 
 
+    public function testType()
+    {
+    $user = User::inRandomOrder()->first();
+    $value=$user->type;
+    $this->assertContains($value, ['Admin','SuperAdmin','Member']);
+
+    }
+
+
     //public function testInsert()
     //{
 
